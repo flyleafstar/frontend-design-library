@@ -6,18 +6,16 @@
 
 ## 安装
 
-这是私有仓库，下载需要有仓库访问权限。先在 GitHub CLI 登录，随后在 macOS / Linux 或 Windows Git Bash 执行：
+这是公开仓库，安装无需登录 GitHub。安装 Git 后，在 macOS / Linux 或 Windows Git Bash 执行：
 
 ```bash
-gh auth login
-gh repo clone flyleafstar/frontend-design-library "${CODEX_HOME:-$HOME/.codex}/skills/frontend-design-library"
+git clone https://github.com/flyleafstar/frontend-design-library.git "${CODEX_HOME:-$HOME/.codex}/skills/frontend-design-library"
 ```
 
 Windows PowerShell（默认 Codex 目录）：
 
 ```powershell
-gh auth login
-gh repo clone flyleafstar/frontend-design-library "$env:USERPROFILE\.codex\skills\frontend-design-library"
+git clone https://github.com/flyleafstar/frontend-design-library.git "$env:USERPROFILE\.codex\skills\frontend-design-library"
 ```
 
 若已设置 `CODEX_HOME`，使用其下的 `skills/frontend-design-library`。目标目录已存在时先查看现有版本，不要直接覆盖；可下载到另一个目录进行比较。已有本仓库 Git checkout 时可在该目录用 `git pull --ff-only` 更新。
