@@ -1,0 +1,1384 @@
+{
+  "updatedAt": "2026-10-24",
+  "styles": [
+    {
+      "id": "minimal",
+      "name": "极简留白",
+      "english": "Minimal",
+      "description": "用比例、留白和字体建立秩序。适合个人主页、工具页与阅读界面。",
+      "palette": [
+        "#f4f3ef",
+        "#20221f",
+        "#899186"
+      ],
+      "prompt": "以内容为中心，采用黑白灰与单一强调色；限制首屏信息量；用清晰字体层级、充足留白和细分隔线建立结构，避免为装饰加入无意义卡片。"
+    },
+    {
+      "id": "editorial",
+      "name": "编辑刊物",
+      "english": "Editorial",
+      "description": "大标题、栏网格与图文节奏。适合研究报告、博客和品牌叙事。",
+      "palette": [
+        "#efece3",
+        "#252522",
+        "#b44a32"
+      ],
+      "prompt": "采用杂志式排版：有表现力的衬线标题、易读的正文、细分隔线与有节奏的图文布局。长文提供目录、摘要、来源和阅读锚点；不要把整篇文章压成卡片。"
+    },
+    {
+      "id": "bento",
+      "name": "Bento 模块",
+      "english": "Bento grid",
+      "description": "不同尺寸的模块拼出产品故事。适合 SaaS 功能介绍与产品展示。",
+      "palette": [
+        "#eeeef0",
+        "#d7e8d8",
+        "#222724"
+      ],
+      "prompt": "用大小有别的模块建立视觉重点，每个模块只表达一个真实价值；主模块展示核心功能，次模块解释证据或使用方式。手机端按阅读顺序排布，避免等宽卡片重复堆砌。"
+    },
+    {
+      "id": "brutalist",
+      "name": "粗野 / 新粗野",
+      "english": "Neo-brutalism",
+      "description": "从原始控件到粗边框、硬阴影。适合创意作品集、活动和独立产品。",
+      "palette": [
+        "#f6ee58",
+        "#c7c0ff",
+        "#161616"
+      ],
+      "prompt": "先选择一个分支：经典粗野风强调原始控件、直接排版与反修饰；新粗野风采用粗边框、偏移实色阴影和少量饱和色。不要无条件混合两者；正文仍需舒适阅读，保留清楚的导航。"
+    },
+    {
+      "id": "dark",
+      "name": "暗色科技",
+      "english": "Dark tech",
+      "description": "深背景、精准光感与产品演示。适合开发工具、AI 产品与数据界面。",
+      "palette": [
+        "#121820",
+        "#c5f16f",
+        "#8d9ba8"
+      ],
+      "prompt": "采用深色中性背景与一种强调色，界面层次用亮度和边界区分；让真实产品演示占据视觉中心。控制光晕、渐变和发光文字，保证正文与图表标签对比度。"
+    },
+    {
+      "id": "organic",
+      "name": "自然有机",
+      "english": "Organic",
+      "description": "大地色、柔和形状与自然节奏。适合生活方式、食品、健康与文化品牌。",
+      "palette": [
+        "#e9e2d2",
+        "#617764",
+        "#bd7751"
+      ],
+      "prompt": "用暖纸色、植物绿或陶土色，配合自然形态与舒缓的版面节奏。选择有授权的真实图片，避免让装饰形状压过产品信息；健康类内容保持事实与证据可见。"
+    },
+    {
+      "id": "retro",
+      "name": "复古像素",
+      "english": "Retro / pixel",
+      "description": "像素边缘、老式窗口与怀旧色彩。适合趣味工具、游戏与个性主页。",
+      "palette": [
+        "#c3c3c3",
+        "#000080",
+        "#fffef3"
+      ],
+      "prompt": "借鉴早期桌面或像素游戏的窗口、边框与控件语言；正文使用易读字体，仅标题与图标保留像素感。确保按钮可聚焦，怀旧外观不牺牲现代操作体验。"
+    },
+    {
+      "id": "luxury",
+      "name": "高端奢雅",
+      "english": "Refined luxury",
+      "description": "克制配色、大片留白与精确细节。适合建筑、精品品牌与高端服务。",
+      "palette": [
+        "#ebe6dd",
+        "#272923",
+        "#927651"
+      ],
+      "prompt": "用克制的色彩、精确的字距与大面积留白呈现高端感；优先高质量且授权清晰的图片，控制金色与动效用量。价格、服务范围和行动入口仍然清楚可见。"
+    },
+    {
+      "id": "enterprise",
+      "name": "企业工作台",
+      "english": "Enterprise UI",
+      "description": "清晰导航、可读表格与状态信息。适合 B2B SaaS、后台和业务系统。",
+      "palette": [
+        "#1e2b37",
+        "#f4f6f8",
+        "#3376b6"
+      ],
+      "prompt": "以业务任务为中心：稳定导航、清晰面包屑、紧凑但易读的表格与筛选；明确状态、权限、反馈和空状态。优先可操作的信息层级，按真实业务字段呈现，勿伪造指标。"
+    },
+    {
+      "id": "immersive",
+      "name": "沉浸动效",
+      "english": "Immersive motion",
+      "description": "滚动叙事、空间感与过渡。适合品牌故事、作品集和短篇专题。",
+      "palette": [
+        "#18171c",
+        "#e8dfcd",
+        "#df6853"
+      ],
+      "prompt": "先建立可读的静态页面，再以滚动节奏、图片过渡或少量空间动效增强叙事。支持减少动态效果偏好；保留普通滚动和键盘导航；低性能设备提供静态降级。"
+    }
+  ],
+  "types": [
+    {
+      "id": "landing",
+      "name": "产品落地页"
+    },
+    {
+      "id": "portfolio",
+      "name": "个人 / 作品集"
+    },
+    {
+      "id": "dashboard",
+      "name": "后台 / 数据看板"
+    },
+    {
+      "id": "ecommerce",
+      "name": "电商 / 商品"
+    },
+    {
+      "id": "editorial",
+      "name": "文章 / 研究报告"
+    },
+    {
+      "id": "docs",
+      "name": "文档 / 知识库"
+    },
+    {
+      "id": "campaign",
+      "name": "活动 / 专题"
+    },
+    {
+      "id": "tools",
+      "name": "在线工具"
+    },
+    {
+      "id": "corporate",
+      "name": "企业 / 品牌官网"
+    }
+  ],
+  "resources": [
+    {
+      "id": "site-awwwards",
+      "name": "Awwwards",
+      "kind": "inspiration",
+      "url": "https://www.awwwards.com/websites/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "按行业、视觉标签与技术分类的获奖网站画廊，适合寻找品牌官网、作品集和沉浸式互动方向。",
+      "styles": [
+        "immersive",
+        "luxury",
+        "editorial",
+        "dark"
+      ],
+      "types": [
+        "corporate",
+        "portfolio",
+        "ecommerce",
+        "campaign"
+      ],
+      "stack": "视觉参考",
+      "htmlReady": false,
+      "access": "公开画廊可浏览；另有 Pro、课程与市场付费服务",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://www.awwwards.com/websites/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "按同一行业比较首屏如何传达品牌定位",
+        "拆解滚动、转场与文字出现的先后节奏",
+        "用 Animation、Typography、WebGL 标签精确寻找局部参考"
+      ],
+      "caution": "获奖展示不等于开源模板；重动效方案需要额外评估手机性能与操作可用性。"
+    },
+    {
+      "id": "gh-tabler",
+      "name": "Tabler",
+      "kind": "template",
+      "url": "https://tabler.io/",
+      "demoUrl": "https://preview.tabler.io/",
+      "description": "适合数据工作台和企业后台的 HTML 界面套件，提供布局、表单、表格与明暗主题参考。",
+      "styles": [
+        "enterprise",
+        "minimal",
+        "dark"
+      ],
+      "types": [
+        "dashboard",
+        "tools"
+      ],
+      "stack": "HTML · Bootstrap 5 · CSS/JS",
+      "htmlReady": true,
+      "takeaways": [
+        "把筛选、数据表和行内操作放在同一工作区域",
+        "用统一卡片、标签和表单间距控制高密度信息",
+        "明暗主题沿用同一组件层级"
+      ],
+      "caution": "核心代码 MIT；附带第三方库使用各自许可证，官方特别提示 ApexCharts v5 起采用不同授权。采用编译后的 CSS/JS 即可；正式项目固定版本并按需引入。",
+      "repoUrl": "https://github.com/tabler/tabler",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/tabler/tabler/blob/dev/LICENSE",
+      "evidenceUrl": "https://github.com/tabler/tabler/blob/dev/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "site-html5up",
+      "name": "HTML5 UP",
+      "kind": "template",
+      "url": "https://html5up.net/",
+      "repoUrl": "",
+      "demoUrl": "https://html5up.net/",
+      "description": "可预览并免费下载的响应式 HTML5 与 CSS3 模板，适合作品集、文章站和简单产品展示页起步。",
+      "styles": [
+        "minimal",
+        "editorial",
+        "dark"
+      ],
+      "types": [
+        "portfolio",
+        "editorial",
+        "landing",
+        "corporate"
+      ],
+      "stack": "HTML / CSS / JS",
+      "htmlReady": true,
+      "access": "模板免费下载；提供需要另外购买的免署名产品入口",
+      "license": "CC BY 3.0，需署名 HTML5 UP",
+      "licenseUrl": "https://html5up.net/license",
+      "evidenceUrl": "https://html5up.net/license",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "用 Editorial 研究文章页和侧栏的关系",
+        "用 Story 研究单页内容模块的交替排列",
+        "从模板中学习响应式断点与图片裁切方式"
+      ],
+      "caution": "商用也需保留设计署名；正式使用前应核对具体包中的字体、图片和第三方依赖说明。"
+    },
+    {
+      "id": "site-recent",
+      "name": "Recent（Godly 入口现跳转至此）",
+      "kind": "inspiration",
+      "url": "https://recent.design/websites",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "提供网站、界面与动态视觉参考，可按 AI、SaaS、电商、作品集和编辑内容等主题浏览。",
+      "styles": [
+        "dark",
+        "bento",
+        "immersive"
+      ],
+      "types": [
+        "landing",
+        "portfolio",
+        "ecommerce",
+        "editorial"
+      ],
+      "stack": "视觉参考",
+      "htmlReady": false,
+      "access": "公开网站画廊可浏览；未核验完整收费规则",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://recent.design/websites",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "从 Website 分类挑选同类产品首屏",
+        "交叉查看 Motion 与 Web 的视觉表达",
+        "记录一个案例的主色、标题尺度和画面密度"
+      ],
+      "caution": "本次 godly.website 被重定向至 Recent，因此不重复收录为两个站；画廊不提供原站源码授权。"
+    },
+    {
+      "id": "gh-neobrutalism",
+      "name": "Neobrutalism components",
+      "kind": "component",
+      "url": "https://www.neobrutalism.dev/",
+      "demoUrl": "https://www.neobrutalism.dev/docs",
+      "description": "以粗边框、鲜明配色和硬阴影为特征的 React 组件，适合个性产品、个人作品与活动页面。",
+      "styles": [
+        "brutalist"
+      ],
+      "types": [
+        "landing",
+        "portfolio",
+        "campaign",
+        "tools"
+      ],
+      "stack": "React · Tailwind CSS · shadcn/ui · 需构建",
+      "htmlReady": false,
+      "takeaways": [
+        "把粗描边和硬阴影作为统一组件语言",
+        "保持强烈配色下的文字层级与可读性",
+        "在按钮、卡片与表单上复用同一边框规则"
+      ],
+      "caution": "React/Tailwind 组件，不能直接复制到独立 HTML；当前官方文档说明组件主要基于 shadcn/ui 与 Base UI，接入前确认版本与依赖。",
+      "repoUrl": "https://github.com/ekmas/neobrutalism-components",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/ekmas/neobrutalism-components/blob/main/LICENSE",
+      "evidenceUrl": "https://github.com/ekmas/neobrutalism-components/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-astropaper",
+      "name": "AstroPaper",
+      "kind": "template",
+      "url": "https://astro-paper.pages.dev/",
+      "demoUrl": "https://astro-paper.pages.dev/",
+      "description": "以阅读体验为中心的极简 Astro 博客主题，适合研究笔记、开发日志与个人知识发布。",
+      "styles": [
+        "editorial",
+        "minimal",
+        "dark"
+      ],
+      "types": [
+        "editorial",
+        "portfolio"
+      ],
+      "stack": "Astro · Tailwind CSS · Markdown · 需构建",
+      "htmlReady": false,
+      "takeaways": [
+        "控制正文宽度并保持长文阅读节奏",
+        "结合标签、分页和静态搜索组织文章",
+        "让明暗主题与文章目录服务阅读任务"
+      ],
+      "caution": "需安装依赖并构建；静态搜索索引在构建时生成。作者自述的可访问性测试不等于你修改后的页面已通过验证。",
+      "repoUrl": "https://github.com/satnaing/astro-paper",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/satnaing/astro-paper/blob/main/LICENSE",
+      "evidenceUrl": "https://github.com/satnaing/astro-paper/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "site-codrops",
+      "name": "Codrops",
+      "kind": "component",
+      "url": "https://tympanus.net/codrops/",
+      "repoUrl": "https://github.com/codrops",
+      "demoUrl": "",
+      "description": "结合前端教程、创意演示、案例研究与 GitHub 示例，适合研究滚动、悬停、页面转场和 WebGL。",
+      "styles": [
+        "immersive",
+        "dark",
+        "editorial"
+      ],
+      "types": [
+        "portfolio",
+        "campaign",
+        "landing"
+      ],
+      "stack": "HTML / CSS / JS；部分 React / WebGL",
+      "htmlReady": false,
+      "access": "公开教程与可下载 demos；另有第三方付费课程入口",
+      "license": "可下载 demos 默认 MIT，另有说明时以单项为准；freebies 条款不同",
+      "licenseUrl": "https://tympanus.net/codrops/licensing/",
+      "evidenceUrl": "https://tympanus.net/codrops/licensing/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "从教程拆出一个明确的悬停或滚动效果",
+        "对照 demo 与源码理解动画触发条件",
+        "将实验动效缩减为页面中少量有目的的交互"
+      ],
+      "caution": "各 demo 的构建和依赖不同，不保证直接打开 HTML；MIT 不自动覆盖示例图片、字体及第三方素材。"
+    },
+    {
+      "id": "gh-nes",
+      "name": "NES.css",
+      "kind": "component",
+      "url": "https://nostalgic-css.github.io/NES.css/",
+      "demoUrl": "https://nostalgic-css.github.io/NES.css/",
+      "description": "8-bit 像素游戏风格的纯 CSS 组件，适合游戏专题、个人实验页与轻松的活动页面。",
+      "styles": [
+        "retro"
+      ],
+      "types": [
+        "campaign",
+        "portfolio",
+        "tools"
+      ],
+      "stack": "HTML · 纯 CSS",
+      "htmlReady": true,
+      "takeaways": [
+        "用像素边框和按钮反馈统一复古语言",
+        "消息框、进度条与徽章形成游戏式提示",
+        "将像素装饰集中在少数关键组件"
+      ],
+      "caution": "只提供组件，需自己设计页面布局；推荐英文字体不覆盖中文，中文像素字体须另选并核查授权；文档授权与代码 MIT 不同。",
+      "repoUrl": "https://github.com/nostalgic-css/NES.css",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/nostalgic-css/NES.css/blob/develop/LICENSE",
+      "evidenceUrl": "https://github.com/nostalgic-css/NES.css/blob/develop/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-sb-freelancer",
+      "name": "Start Bootstrap · Freelancer",
+      "kind": "template",
+      "url": "https://startbootstrap.com/theme/freelancer/",
+      "demoUrl": "https://startbootstrap.github.io/startbootstrap-freelancer/",
+      "description": "围绕个人身份与作品展示的单页作品集，适合设计师、自由职业者和个人服务主页。",
+      "styles": [
+        "minimal"
+      ],
+      "types": [
+        "portfolio",
+        "landing"
+      ],
+      "stack": "HTML · Bootstrap · CSS/JS",
+      "htmlReady": true,
+      "takeaways": [
+        "用头像、姓名和一句专业身份构成首屏",
+        "项目缩略图统一比例并以弹窗补充说明",
+        "个人介绍、联系方式和社交入口分层放置"
+      ],
+      "caution": "直接使用 dist；头像、图标和作品需替换为自己的授权素材。联系表单默认依赖额外服务配置。",
+      "repoUrl": "https://github.com/StartBootstrap/startbootstrap-freelancer",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE",
+      "evidenceUrl": "https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "site-lapaninja",
+      "name": "Lapa Ninja",
+      "kind": "inspiration",
+      "url": "https://www.lapa.ninja/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "提供落地页长截图、视频与历史版本，含 Bento Grid、Retro Style、Minimal 等细分标签。",
+      "styles": [
+        "minimal",
+        "bento",
+        "retro",
+        "organic",
+        "luxury"
+      ],
+      "types": [
+        "landing",
+        "ecommerce",
+        "corporate",
+        "editorial"
+      ],
+      "stack": "视觉参考；含模板入口",
+      "htmlReady": false,
+      "access": "公开案例可浏览；Pro 提供无限画板、收藏与去广告；模板另计",
+      "license": "截图归各自权利人；模板按供应商条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://www.lapa.ninja/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "用长截图比较整页节奏而非只看首屏",
+        "按 Bento Grid 和 Retro Style 建立风格样本",
+        "对照网站历史版本识别内容与导航的变化"
+      ],
+      "caution": "历史截图可能与当前线上网站不同；页面明确说明截图版权归原权利人。"
+    },
+    {
+      "id": "site-minimalgallery",
+      "name": "Minimal Gallery",
+      "kind": "inspiration",
+      "url": "https://minimal.gallery/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "主打美观与功能兼顾的网页精选，含个人、作品集、研究、医疗、年度报告等细分页面类型。",
+      "styles": [
+        "minimal",
+        "editorial",
+        "luxury"
+      ],
+      "types": [
+        "portfolio",
+        "corporate",
+        "editorial",
+        "landing"
+      ],
+      "stack": "视觉参考；含模板入口",
+      "htmlReady": false,
+      "access": "公开画廊可浏览；另有 premium 模板，需逐项核价",
+      "license": "按各作品及模板条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://minimal.gallery/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "研究标题、图片和正文之间的留白比例",
+        "用 Research 与 Healthcare 分类寻找专业内容表达",
+        "用 Portfolio 分类比较缩略图与项目摘要的权重"
+      ],
+      "caution": "极简是一种编辑筛选方向；收录内容仍需逐项判断是否适合高信息密度页面。"
+    },
+    {
+      "id": "gh-astrowind",
+      "name": "AstroWind",
+      "kind": "template",
+      "url": "https://astrowind.vercel.app/",
+      "demoUrl": "https://astrowind.vercel.app/",
+      "description": "面向营销站、企业站和博客的 Astro 模板，用可组合区块组织首屏、功能、定价、案例与内容。",
+      "styles": [
+        "minimal",
+        "bento",
+        "dark"
+      ],
+      "types": [
+        "landing",
+        "corporate",
+        "editorial"
+      ],
+      "stack": "Astro · Tailwind CSS · 需构建",
+      "htmlReady": false,
+      "takeaways": [
+        "用独立区块重组不同产品的落地页叙事",
+        "让功能网格、定价和问答各自承担清晰任务",
+        "共用导航、主题与博客内容配置"
+      ],
+      "caution": "需 Node.js 与 Astro 构建，不能把 .astro 源码直接当 HTML 打开；旧 onwidget/astrowind 已迁至 arthelokyo/astrowind。示例图片与运营内容需替换。",
+      "repoUrl": "https://github.com/arthelokyo/astrowind",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/arthelokyo/astrowind/blob/main/LICENSE.md",
+      "evidenceUrl": "https://github.com/arthelokyo/astrowind/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "site-siteinspire",
+      "name": "Siteinspire",
+      "kind": "inspiration",
+      "url": "https://www.siteinspire.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "以风格、类型、主题与平台筛选真实网站，极简、排版、网格和作品集分类尤其适合系统比对。",
+      "styles": [
+        "minimal",
+        "editorial",
+        "luxury"
+      ],
+      "types": [
+        "portfolio",
+        "corporate",
+        "ecommerce",
+        "editorial"
+      ],
+      "stack": "视觉参考",
+      "htmlReady": false,
+      "access": "公开画廊可浏览；未核验额外收费服务",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://www.siteinspire.com/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "比较 Minimal 与 Typographic 的留白和字号关系",
+        "从 Grid Layout 分类提炼内容网格",
+        "用 Portfolio 分类观察项目列表与详情页的信息分工"
+      ],
+      "caution": "收录的是成品网站；品牌图片、字体及版式不能直接视为可商用素材包。"
+    },
+    {
+      "id": "site-landbook",
+      "name": "Landbook",
+      "kind": "inspiration",
+      "url": "https://land-book.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "带行业、风格、字体、颜色和平台筛选的网页灵感库，适合筛选 SaaS、产品与品牌落地页。",
+      "styles": [
+        "bento",
+        "dark",
+        "brutalist",
+        "organic"
+      ],
+      "types": [
+        "landing",
+        "corporate",
+        "portfolio",
+        "ecommerce"
+      ],
+      "stack": "视觉参考；含第三方模板入口",
+      "htmlReady": false,
+      "access": "Basic 免费且有限制；完整筛选、无限画板等为 Pro；模板价格分别标注",
+      "license": "画廊按各作品条款；模板按供应商条款",
+      "licenseUrl": "https://land-book.com/terms-of-service",
+      "evidenceUrl": "https://land-book.com/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "组合行业与风格标签缩小参考范围",
+        "拆解 Cards、Big Type 和 Visible Borders 的组合",
+        "用同色系案例建立项目配色板"
+      ],
+      "caution": "部分模板是 Framer 或 Webflow 产品，并非可直接双击运行的 HTML；免费套餐的筛选和收藏有限。"
+    },
+    {
+      "id": "site-landingfolio",
+      "name": "Landingfolio",
+      "kind": "inspiration",
+      "url": "https://www.landingfolio.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "集中整理落地页、定价、关于、登录与注册页面，并另设 Tailwind、Webflow、Figma 组件库。",
+      "styles": [
+        "minimal",
+        "bento",
+        "enterprise"
+      ],
+      "types": [
+        "landing",
+        "corporate",
+        "tools"
+      ],
+      "stack": "视觉参考；另有 Tailwind / Webflow 组件",
+      "htmlReady": false,
+      "access": "部分公开浏览及免费账户；完整组件库、下载和高级功能需 All Access",
+      "license": "案例按各作品条款；组件按购买许可",
+      "licenseUrl": "https://www.landingfolio.com/legal/licensing-agreement",
+      "evidenceUrl": "https://www.landingfolio.com/pricing",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "将首屏、定价、FAQ 分开寻找参考",
+        "比较注册页表单与信任信息的布局",
+        "先确认技术栈，再选用对应组件形式"
+      ],
+      "caution": "案例截图与可下载组件是不同资源；订阅页面的商用说明不等于获得被收录品牌站的全部版权。 下载组件的源码不可作为素材包再分发，也不可据此转售衍生模板。"
+    },
+    {
+      "id": "site-onepagelove",
+      "name": "One Page Love",
+      "kind": "inspiration",
+      "url": "https://onepagelove.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "专注单页网站，区分整站案例、页面区块与模板，适合小产品、活动页面和个人作品集。",
+      "styles": [
+        "minimal",
+        "editorial",
+        "immersive"
+      ],
+      "types": [
+        "landing",
+        "portfolio",
+        "campaign"
+      ],
+      "stack": "视觉参考；含模板入口",
+      "htmlReady": false,
+      "access": "公开案例可浏览；模板的价格与格式需逐项确认",
+      "license": "按各作品及模板条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://onepagelove.com/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "规划一页中卖点、证明、价格和行动按钮的顺序",
+        "从 Sections 寻找单一区块的结构",
+        "比较个人作品集与产品发布页的内容密度"
+      ],
+      "caution": "单页设计不天然适合复杂后台；模板入口不保证都是原生 HTML。"
+    },
+    {
+      "id": "site-saaspages",
+      "name": "SaaS Pages",
+      "kind": "inspiration",
+      "url": "https://saaspages.xyz/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "围绕 SaaS 文案和页面设计整理导航、首屏、客户标识、CTA、定价、FAQ 与知识库等区块。",
+      "styles": [
+        "minimal",
+        "enterprise"
+      ],
+      "types": [
+        "landing",
+        "corporate",
+        "docs"
+      ],
+      "stack": "视觉与文案结构参考",
+      "htmlReady": false,
+      "access": "公开页面可浏览；未核验额外收费服务",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://saaspages.xyz/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "逐块比较标题如何表达用户收益",
+        "研究定价表、FAQ 和客户证明的组合",
+        "以知识库和文章区块补齐产品官网的信息架构"
+      ],
+      "caution": "区块建议和截图属于设计参考；收录产品可能已经改版，需要打开原站复核。"
+    },
+    {
+      "id": "site-refero",
+      "name": "Refero",
+      "kind": "inspiration",
+      "url": "https://refero.design/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "官方检索摘要显示其覆盖真实产品屏幕、流程与模式，包括仪表盘、登录、订阅和空状态。",
+      "styles": [
+        "enterprise",
+        "minimal",
+        "dark"
+      ],
+      "types": [
+        "dashboard",
+        "tools",
+        "ecommerce",
+        "landing"
+      ],
+      "stack": "产品界面与流程参考",
+      "htmlReady": false,
+      "access": "本次官方页面正文未能读取；套餐、免费范围与下载权限待人工复核",
+      "license": "按平台及各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://refero.design/apps?trk=public_post_main-feed-card-text",
+      "verifiedAt": "2026-10-24",
+      "verification": "仅检索摘要",
+      "takeaways": [
+        "按 Dashboard、Log In 和 Product Details 对比页面",
+        "将注册到首次完成任务作为连续流程研究",
+        "单独收集空状态、命令面板和计费界面的模式"
+      ],
+      "caution": "本条为官方检索摘要级核验；不能据此承诺现时收费、完整访问范围或源码下载能力。"
+    },
+    {
+      "id": "site-mobbin",
+      "name": "Mobbin",
+      "kind": "inspiration",
+      "url": "https://mobbin.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "真实应用与网站的界面参考库，适合按用户流程、状态和屏幕研究产品操作体验。",
+      "styles": [
+        "enterprise",
+        "minimal",
+        "dark"
+      ],
+      "types": [
+        "dashboard",
+        "tools",
+        "ecommerce",
+        "landing"
+      ],
+      "stack": "产品界面与流程参考",
+      "htmlReady": false,
+      "access": "免费账户访问有限；完整应用、站点、流程与动画等需付费方案",
+      "license": "按平台及各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://mobbin.com/pricing",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "对照同一任务在不同产品中的步骤数",
+        "补齐后台的空、加载、错误和成功状态参考",
+        "比较桌面与移动端的信息优先级"
+      ],
+      "caution": "截图和流程参考不附带原产品源码；付费访问也不等于可以转售原产品设计资产。"
+    },
+    {
+      "id": "site-httpster",
+      "name": "Httpster",
+      "kind": "inspiration",
+      "url": "https://httpster.net/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "按风格与行业交叉筛选的独立网站画廊，明确提供复古、排版、非传统布局和导航等类别。",
+      "styles": [
+        "editorial",
+        "minimal",
+        "retro",
+        "brutalist"
+      ],
+      "types": [
+        "portfolio",
+        "editorial",
+        "ecommerce",
+        "campaign"
+      ],
+      "stack": "视觉参考",
+      "htmlReady": false,
+      "access": "公开画廊可浏览；未核验额外收费服务",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://httpster.net/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "用 Typographic 分类研究文字主导的页面",
+        "比较 Unusual Layout 的非对称组织方式",
+        "以 Retro 与 Print 分类寻找数字页面中的印刷感"
+      ],
+      "caution": "不寻常的布局和导航需要结合实际任务验证，不能因为视觉独特就直接迁移到业务后台。"
+    },
+    {
+      "id": "site-brutalistwebsites",
+      "name": "Brutalist Websites",
+      "kind": "inspiration",
+      "url": "https://brutalistwebsites.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "围绕粗野、原始与反精致网页美学的专题档案，含作品名单和部分创作者访谈。",
+      "styles": [
+        "brutalist",
+        "retro",
+        "editorial"
+      ],
+      "types": [
+        "portfolio",
+        "editorial",
+        "campaign"
+      ],
+      "stack": "视觉参考",
+      "htmlReady": false,
+      "access": "公开档案可浏览；未核验额外收费服务",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://brutalistwebsites.com/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "观察硬边框、默认控件与强对比文字的表达",
+        "比较故意不规则布局如何建立视觉焦点",
+        "从创作者访谈理解形式与内容之间的关系"
+      ],
+      "caution": "档案含较早作品，部分原链接可能已变更；适合实验与文化传播项目，不能忽略可读性。 此站涵盖更广的经典粗野网页；不都采用彩色粗边框与硬阴影的新粗野组件风。"
+    },
+    {
+      "id": "site-cruip",
+      "name": "Cruip",
+      "kind": "template",
+      "url": "https://cruip.com/",
+      "repoUrl": "",
+      "demoUrl": "https://cruip.com/",
+      "description": "覆盖 SaaS 落地页、管理后台、文档与博客的 Tailwind 模板商店；部分模板提供 HTML 版本。",
+      "styles": [
+        "minimal",
+        "dark",
+        "enterprise",
+        "bento"
+      ],
+      "types": [
+        "landing",
+        "dashboard",
+        "docs",
+        "editorial",
+        "corporate"
+      ],
+      "stack": "Tailwind；HTML / Next.js / React / Vue 因模板而异",
+      "htmlReady": true,
+      "access": "主要为付费模板；另有免费资源专区，免费版本的技术栈需单独核对",
+      "license": "Cruip 商业许可；允许客户项目，不允许转售或再分发模板及衍生模板",
+      "licenseUrl": "https://cruip.com/terms/",
+      "evidenceUrl": "https://cruip.com/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "用 Mosaic 比较后台侧栏、指标卡与表格布局",
+        "从 Docs 模板研究目录与正文层级",
+        "比较暗色 SaaS 页中代码、产品图和 CTA 的关系"
+      ],
+      "caution": "htmlReady 仅表示库中有 HTML 版本；部分新模板仅有框架版本。购买许可不允许把源码放入公开素材下载库。 HTML 版本可使用预编译 CSS；修改 Tailwind 类名后需通过 Tailwind CLI 或项目构建命令重新生成 CSS。"
+    },
+    {
+      "id": "site-commercecream",
+      "name": "Commerce Cream",
+      "kind": "inspiration",
+      "url": "https://commercecream.com/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "官方检索摘要显示其专注 Shopify 电商案例，按珠宝、美妆、食品、家居和可持续品牌等分类。",
+      "styles": [
+        "organic",
+        "luxury",
+        "minimal"
+      ],
+      "types": [
+        "ecommerce",
+        "landing"
+      ],
+      "stack": "Shopify 电商视觉参考",
+      "htmlReady": false,
+      "access": "本次正文抓取超时；公开检索可见案例说明，收费范围待复核",
+      "license": "按各作品条款",
+      "licenseUrl": "",
+      "evidenceUrl": "https://commercecream.com/",
+      "verifiedAt": "2026-10-24",
+      "verification": "仅检索摘要",
+      "takeaways": [
+        "按商品品类选择相近的品牌语气",
+        "观察商品摄影与页面底色的配合",
+        "比较品牌故事、商品卡片和购买入口的比重"
+      ],
+      "caution": "本条仅核验到官网检索摘要；原站为 Shopify 商店参考，不等于 HTML 模板或可复制的商品资产。"
+    },
+    {
+      "id": "site-curated",
+      "name": "Curated",
+      "kind": "inspiration",
+      "url": "https://curated.design/",
+      "repoUrl": "",
+      "demoUrl": "",
+      "description": "按行业与风格整理真实网站，并提供区块级参考，适合把多个案例拆为可比较的页面部分。",
+      "styles": [
+        "minimal",
+        "bento",
+        "dark",
+        "immersive"
+      ],
+      "types": [
+        "landing",
+        "portfolio",
+        "ecommerce",
+        "tools"
+      ],
+      "stack": "视觉与区块结构参考；含 Framer 模板入口",
+      "htmlReady": false,
+      "access": "公开画廊可浏览；风格等高级筛选、保存搜索为 Pro；商店模板分别定价",
+      "license": "案例按各作品条款；商店按各模板许可",
+      "licenseUrl": "",
+      "evidenceUrl": "https://curated.design/",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面",
+      "takeaways": [
+        "将参考页拆成 Hero、Bento、Features 和 Newsletter",
+        "按相同区块比较不同网站的信息量",
+        "先锁定行业再选择视觉风格以减少无关参考"
+      ],
+      "caution": "参考区块不代表原网站源码已经开源；Framer 模板与静态 HTML 的运行方式不同。"
+    },
+    {
+      "id": "gh-sb-creative",
+      "name": "Start Bootstrap · Creative",
+      "kind": "template",
+      "url": "https://startbootstrap.com/theme/creative/",
+      "demoUrl": "https://startbootstrap.github.io/startbootstrap-creative/",
+      "description": "单页品牌与服务介绍模板，将首屏主张、服务亮点、项目图片和联系入口串成一条浏览路径。",
+      "styles": [
+        "minimal"
+      ],
+      "types": [
+        "landing",
+        "corporate",
+        "campaign"
+      ],
+      "stack": "HTML · Bootstrap · CSS/JS",
+      "htmlReady": true,
+      "takeaways": [
+        "首屏只突出一句主张与一个行动按钮",
+        "服务卖点按并列短段组织",
+        "作品图片区之后接明确联系入口"
+      ],
+      "caution": "直接编辑 dist 内 HTML/CSS；源码 Pug/Sass 修改需构建。联系表单需接入 SB Forms 或自建服务；示例图片、字体与品牌素材应另核授权。",
+      "repoUrl": "https://github.com/StartBootstrap/startbootstrap-creative",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/StartBootstrap/startbootstrap-creative/blob/master/LICENSE",
+      "evidenceUrl": "https://github.com/StartBootstrap/startbootstrap-creative/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-sb-clean-blog",
+      "name": "Start Bootstrap · Clean Blog",
+      "kind": "template",
+      "url": "https://startbootstrap.com/theme/clean-blog/",
+      "demoUrl": "https://startbootstrap.github.io/startbootstrap-clean-blog/",
+      "description": "以文章阅读为中心的响应式博客模板，包含文章列表、示例长文、关于与联系页面，适合研究札记和个人出版。",
+      "styles": [
+        "editorial",
+        "minimal"
+      ],
+      "types": [
+        "editorial",
+        "portfolio"
+      ],
+      "stack": "HTML · Bootstrap · CSS/JS",
+      "htmlReady": true,
+      "takeaways": [
+        "用文章标题、副标题、作者与日期构成清晰列表",
+        "长文用小标题、引用和配图建立阅读节奏",
+        "将文章、个人介绍和联系入口分为独立页面"
+      ],
+      "caution": "直接编辑 dist 内 HTML/CSS 即可；源码 Pug/Sass 修改需构建。示例文章为占位内容，图片、字体需另核授权；联系表单需接入 SB Forms 或自建服务。",
+      "repoUrl": "https://github.com/StartBootstrap/startbootstrap-clean-blog",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/LICENSE",
+      "evidenceUrl": "https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-sb-shop",
+      "name": "Start Bootstrap · Shop Homepage",
+      "kind": "template",
+      "url": "https://startbootstrap.com/template/shop-homepage/",
+      "demoUrl": "https://startbootstrap.github.io/startbootstrap-shop-homepage/",
+      "description": "轻量商品列表首页，适合借鉴商品卡片、价格层级与促销标记的基础排版。",
+      "styles": [
+        "minimal"
+      ],
+      "types": [
+        "ecommerce"
+      ],
+      "stack": "HTML · Bootstrap · CSS/JS",
+      "htmlReady": true,
+      "takeaways": [
+        "同一网格内保持商品图片和按钮基线一致",
+        "用原价、现价与促销标签建立价格层级",
+        "区分直接购买和查看规格两类入口"
+      ],
+      "caution": "只是前端展示模板，购物车按钮与图片为演示；支付、库存、订单和账号功能需另行实现。",
+      "repoUrl": "https://github.com/StartBootstrap/startbootstrap-shop-homepage",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/LICENSE",
+      "evidenceUrl": "https://github.com/StartBootstrap/startbootstrap-shop-homepage/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-adminlte",
+      "name": "AdminLTE",
+      "kind": "template",
+      "url": "https://adminlte.io/",
+      "demoUrl": "https://adminlte.io/themes/v4/",
+      "description": "以 Bootstrap 和原生 JavaScript 构建的管理后台模板，可参考侧栏导航、业务列表、卡片与工具页。",
+      "styles": [
+        "enterprise",
+        "dark"
+      ],
+      "types": [
+        "dashboard",
+        "tools"
+      ],
+      "stack": "HTML · Bootstrap 5 · 原生 JS",
+      "htmlReady": true,
+      "takeaways": [
+        "侧栏负责模块导航，顶栏负责全局操作",
+        "业务概览与明细列表通过统一卡片组织",
+        "对照表格、看板和文件管理等不同任务布局"
+      ],
+      "caution": "核心 MIT；付费模板另行授权。CDN 版本可免构建；演示数据和前端登录页不等于真实后端、鉴权或业务功能。",
+      "repoUrl": "https://github.com/ColorlibHQ/AdminLTE",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/ColorlibHQ/AdminLTE/blob/master/LICENSE",
+      "evidenceUrl": "https://github.com/ColorlibHQ/AdminLTE/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-pico",
+      "name": "Pico CSS",
+      "kind": "component",
+      "url": "https://picocss.com/",
+      "demoUrl": "https://picocss.com/docs",
+      "description": "通过语义 HTML 获得整洁排版、表单与明暗主题的极简 CSS 参考；官方已停止维护。",
+      "styles": [
+        "minimal",
+        "dark"
+      ],
+      "types": [
+        "tools",
+        "docs",
+        "editorial"
+      ],
+      "stack": "HTML · 单个 CSS",
+      "htmlReady": true,
+      "takeaways": [
+        "先使用语义标签，再补充少量样式类",
+        "让表单、按钮与正文共享基础间距",
+        "用 CSS 变量控制配色与阅读宽度"
+      ],
+      "caution": "官方 README 表示仓库归档、v2.1.1 为最终版；适合作为现有项目或样式参考。名称与 Logo 不在 MIT 授权范围内。",
+      "repoUrl": "https://github.com/picocss/pico",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/picocss/pico/blob/main/LICENSE.md",
+      "evidenceUrl": "https://github.com/picocss/pico/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-98css",
+      "name": "98.css",
+      "kind": "component",
+      "url": "https://jdan.github.io/98.css/",
+      "demoUrl": "https://jdan.github.io/98.css/",
+      "description": "复刻经典桌面窗口、按钮与系统控件的纯 CSS 设计系统，适合复古工具和个人互动作品。",
+      "styles": [
+        "retro"
+      ],
+      "types": [
+        "tools",
+        "portfolio",
+        "campaign"
+      ],
+      "stack": "HTML · 纯 CSS",
+      "htmlReady": true,
+      "takeaways": [
+        "以窗口标题栏把页面模块组织成桌面应用",
+        "借鉴凹凸边框区分按钮和输入区域",
+        "用系统控件语法建立统一交互外观"
+      ],
+      "caution": "库不包含 JavaScript；拖拽、窗口关闭和真实业务行为需自己实现。怀旧视觉不自动满足现代可访问性与移动端要求。",
+      "repoUrl": "https://github.com/jdan/98.css",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/jdan/98.css/blob/main/LICENSE",
+      "evidenceUrl": "https://github.com/jdan/98.css/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-watercss",
+      "name": "Water.css",
+      "kind": "component",
+      "url": "https://watercss.kognise.dev/",
+      "demoUrl": "https://watercss.kognise.dev/",
+      "description": "无需组件类名的轻量 CSS，为普通 HTML 文档、简单工具和内容原型提供统一基线。",
+      "styles": [
+        "minimal",
+        "editorial",
+        "dark"
+      ],
+      "types": [
+        "editorial",
+        "docs",
+        "tools"
+      ],
+      "stack": "HTML · 单个 CSS",
+      "htmlReady": true,
+      "takeaways": [
+        "让标题、正文、表格和代码块共享阅读节奏",
+        "系统明暗偏好驱动基础主题",
+        "仅覆盖少量 CSS 变量即可改变整体气质"
+      ],
+      "caution": "适合简单内容页面；复杂导航、信息密集后台和交互逻辑需自己补充。外部 CDN 资源离线时不可用。",
+      "repoUrl": "https://github.com/kognise/water.css",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/kognise/water.css/blob/master/LICENSE.md",
+      "evidenceUrl": "https://github.com/kognise/water.css/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-bulma",
+      "name": "Bulma",
+      "kind": "component",
+      "url": "https://bulma.io/",
+      "demoUrl": "https://bulma.io/documentation/",
+      "description": "基于 Flexbox 的 CSS 框架，适合组合导航、栅格、卡片、表单和企业网页基础布局。",
+      "styles": [
+        "minimal",
+        "enterprise"
+      ],
+      "types": [
+        "corporate",
+        "landing",
+        "tools"
+      ],
+      "stack": "HTML · CSS · 可选 Sass",
+      "htmlReady": true,
+      "takeaways": [
+        "使用列布局和容器建立稳定对齐关系",
+        "统一表单、按钮和提示消息的尺寸层级",
+        "把导航、卡片和区块按任务自由组合"
+      ],
+      "caution": "只含 CSS，不提供菜单展开、弹窗等 JavaScript 行为；源码 Sass 定制需要构建，编译 CSS 可直接引入。",
+      "repoUrl": "https://github.com/jgthms/bulma",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/jgthms/bulma/blob/main/LICENSE",
+      "evidenceUrl": "https://github.com/jgthms/bulma/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-milligram",
+      "name": "Milligram",
+      "kind": "component",
+      "url": "https://milligram.io/",
+      "demoUrl": "https://milligram.io/",
+      "description": "极简 CSS 起步套件，适合阅读页、文档和表单原型，便于观察少量样式如何改善原生 HTML。",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "types": [
+        "editorial",
+        "docs",
+        "tools"
+      ],
+      "stack": "HTML · CSS · 可选 Sass",
+      "htmlReady": true,
+      "takeaways": [
+        "用简洁字级建立正文与标题层次",
+        "让表单、表格和引用块拥有一致视觉基线",
+        "保留足够留白并限制装饰数量"
+      ],
+      "caution": "基础样式库而非完整网页模板；生产使用前自行核对近期维护、依赖和目标浏览器表现。自定义 Sass 源码需构建。",
+      "repoUrl": "https://github.com/milligram/milligram",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/milligram/milligram/blob/main/license",
+      "evidenceUrl": "https://github.com/milligram/milligram/blob/main/readme.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-daisyui",
+      "name": "daisyUI",
+      "kind": "component",
+      "url": "https://daisyui.com/",
+      "demoUrl": "https://daisyui.com/components/",
+      "description": "面向 Tailwind CSS 的语义组件库，内置多种主题，适合快速比较同一结构下的视觉风格。",
+      "styles": [
+        "minimal",
+        "enterprise",
+        "dark",
+        "retro",
+        "organic",
+        "luxury"
+      ],
+      "types": [
+        "landing",
+        "dashboard",
+        "ecommerce",
+        "tools"
+      ],
+      "stack": "HTML · Tailwind CSS · CSS组件",
+      "htmlReady": true,
+      "takeaways": [
+        "用同一组按钮、卡片和导航比较主题差异",
+        "通过主题变量统一主色、圆角与表面层级",
+        "优先复用稳定组件结构再调整品牌细节"
+      ],
+      "caution": "支持官方 CDN 演示用法；CDN 不含全部状态变体，复杂项目需按安装文档构建。付费模板不自动包含在开源库 MIT 授权内。",
+      "repoUrl": "https://github.com/saadeghi/daisyui",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/saadeghi/daisyui/blob/master/LICENSE",
+      "evidenceUrl": "https://github.com/saadeghi/daisyui/blob/master/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-flowbite",
+      "name": "Flowbite",
+      "kind": "component",
+      "url": "https://flowbite.com/",
+      "demoUrl": "https://flowbite.com/docs/getting-started/introduction/",
+      "description": "基于 Tailwind CSS 的 HTML 组件库，包含表单、导航、表格、弹窗等常见界面模式。",
+      "styles": [
+        "enterprise",
+        "minimal",
+        "dark"
+      ],
+      "types": [
+        "dashboard",
+        "landing",
+        "ecommerce",
+        "tools"
+      ],
+      "stack": "HTML · Tailwind CSS · JS",
+      "htmlReady": true,
+      "takeaways": [
+        "用统一的状态色组织表单与操作反馈",
+        "通过 HTML data 属性连接弹窗等交互",
+        "在暗色模式中保持表面与文字的层级关系"
+      ],
+      "caution": "开源仓库代码 MIT；Flowbite Pro 与部分 Blocks 另有授权。可使用官方 CSS/JS CDN；定制 Tailwind 类与裁剪体积通常需要构建。",
+      "repoUrl": "https://github.com/themesberg/flowbite",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/themesberg/flowbite/blob/main/LICENSE.md",
+      "evidenceUrl": "https://github.com/themesberg/flowbite/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-magicui",
+      "name": "Magic UI",
+      "kind": "component",
+      "url": "https://magicui.design/",
+      "demoUrl": "https://magicui.design/docs",
+      "description": "面向产品落地页的 React 动效组件集，适合借鉴 Bento、跑马灯、文字动效和背景层次。",
+      "styles": [
+        "bento",
+        "dark",
+        "immersive"
+      ],
+      "types": [
+        "landing",
+        "campaign",
+        "portfolio"
+      ],
+      "stack": "React · Tailwind CSS · 需构建",
+      "htmlReady": false,
+      "takeaways": [
+        "用 Bento Grid 同时呈现不同重要性的功能",
+        "用数字与文字动效强调少数关键变化",
+        "让背景图案与内容卡片保持清晰前后层级"
+      ],
+      "caution": "需 React 构建与对应组件依赖；Magic UI Pro 模板另行授权。动效应控制数量并补充减少动态效果偏好与性能测试。",
+      "repoUrl": "https://github.com/magicuidesign/magicui",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/magicuidesign/magicui/blob/main/LICENSE.md",
+      "evidenceUrl": "https://github.com/magicuidesign/magicui/blob/main/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    },
+    {
+      "id": "gh-docsify",
+      "name": "Docsify",
+      "kind": "template",
+      "url": "https://docsify.js.org/",
+      "demoUrl": "https://docsify.js.org/",
+      "description": "将 Markdown 在浏览器中渲染为文档站的轻量工具，适合指南、知识库和产品帮助中心的结构参考。",
+      "styles": [
+        "minimal",
+        "editorial"
+      ],
+      "types": [
+        "docs",
+        "editorial"
+      ],
+      "stack": "HTML · 原生 JS · Markdown",
+      "htmlReady": true,
+      "takeaways": [
+        "用侧栏目录与正文区分离导航和阅读",
+        "按主题拆分 Markdown 并保持章节路径稳定",
+        "通过搜索插件帮助用户定位具体答案"
+      ],
+      "caution": "无需预构建，但运行时要读取 Markdown，应用静态 HTTP 服务而非双击 file://；插件和主题分别检查许可证，搜索与加载依赖浏览器 JavaScript。",
+      "repoUrl": "https://github.com/docsifyjs/docsify",
+      "access": "免费开源（按许可证使用）",
+      "license": "MIT",
+      "licenseUrl": "https://github.com/docsifyjs/docsify/blob/develop/LICENSE",
+      "evidenceUrl": "https://github.com/docsifyjs/docsify/blob/develop/README.md",
+      "verifiedAt": "2026-10-24",
+      "verification": "已核验官方页面"
+    }
+  ]
+}

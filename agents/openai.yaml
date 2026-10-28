@@ -1,0 +1,7 @@
+interface:
+  display_name: "灵感库前端设计"
+  short_description: "自动选取灵感库参考，按四类页面模板开始前端设计、实现与浏览器验收"
+  brand_color: "#52644B"
+  default_prompt: "使用 $frontend-design-library，从我的灵感库选取参考，按页面类型套用提示词并直接完成前端设计与验证。"
+policy:
+  allow_implicit_invocation: true
